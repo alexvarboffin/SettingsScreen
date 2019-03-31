@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.walhalla.settingsscreen.preference.TimePreference
+        app:defaultValue="90"
+        app:key="key4"
+        app:summary="Time Summary"
+        app:title="Time Preference" />
+    <!--style="@style/AppPreference.DialogPreference"-->
+
+
+    <SwitchPreferenceCompat
+        app:key="notifications"
+        app:title="Enable message notifications" />
+
+    <Preference
+        app:key="feedback"
+        app:summary="Report technical issues or suggest new features"
+        app:title="Send feedback" />
+
+</androidx.preference.PreferenceScreen>
