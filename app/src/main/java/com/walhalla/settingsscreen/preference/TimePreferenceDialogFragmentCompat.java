@@ -11,26 +11,23 @@ import com.walhalla.settingsscreen.R;
 import androidx.preference.DialogPreference;
 import androidx.preference.PreferenceDialogFragmentCompat;
 
-
+//https://github.com/alexvarboffin/SettingsScreen
 public class TimePreferenceDialogFragmentCompat extends PreferenceDialogFragmentCompat {
 
-    private static final String ARG_KEY = "test_123";
-    private TimePicker mTimePicker;
 
+    private TimePicker mTimePicker;
     public static TimePreferenceDialogFragmentCompat newInstance(String key) {
-        final TimePreferenceDialogFragmentCompat
-                fragment = new TimePreferenceDialogFragmentCompat();
+        final TimePreferenceDialogFragmentCompat fragment = new TimePreferenceDialogFragmentCompat();
         final Bundle b = new Bundle(1);
         b.putString(ARG_KEY, key);
         fragment.setArguments(b);
-
         return fragment;
     }
     @Override
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
 
-        mTimePicker = view.findViewById(R.id.edit);
+        mTimePicker = view.findViewById(R.id.time_picker);
 
         // Exception when there is no TimePicker
         if (mTimePicker == null) {

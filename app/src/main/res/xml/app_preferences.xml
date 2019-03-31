@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.walhalla.settingsscreen.preference.TimePreference
+        style="@style/AppPreference.DialogPreference"
+        android:dialogIcon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         app:defaultValue="90"
-        app:key="key4"
+        app:key="key_time_preference"
         app:summary="Time Summary"
         app:title="Time Preference" />
-    <!--style="@style/AppPreference.DialogPreference"-->
 
 
     <SwitchPreferenceCompat

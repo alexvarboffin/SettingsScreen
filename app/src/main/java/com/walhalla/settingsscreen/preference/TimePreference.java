@@ -13,7 +13,7 @@ import androidx.preference.DialogPreference;
 
 public class TimePreference extends DialogPreference {
 
-    private int mTime;
+    private int mTime = 0;
     private int mDialogLayoutResId = R.layout.pref_dialog_time;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -48,12 +48,20 @@ public class TimePreference extends DialogPreference {
         return a.getInt(index, 0);
     }
 
+//    deprecated
+//    @Override
+//    protected void onSetInitialValue(boolean restorePersistedValue,
+//                                     Object defaultValue) {
+//        // Read the value. Use the default value if it is not possible.
+//        setTime(restorePersistedValue ?
+//                getPersistedInt(mTime) : (int) defaultValue);
+//    }
+
+
     @Override
-    protected void onSetInitialValue(boolean restorePersistedValue,
-                                     Object defaultValue) {
+    protected void onSetInitialValue(Object defaultValue) {
         // Read the value. Use the default value if it is not possible.
-        setTime(restorePersistedValue ?
-                getPersistedInt(mTime) : (int) defaultValue);
+        setTime(getPersistedInt(mTime));
     }
 
     public int getTime() {

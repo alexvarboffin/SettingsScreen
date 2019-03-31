@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TimePicker xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/edit"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="@dimen/alert_def_padding"
-    android:paddingBottom="@dimen/alert_def_padding" />
-    <!--android:theme="@style/AppAlertDialogContent"-->
+    android:layout_height="match_parent">
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/alert_def_padding"
+        android:paddingBottom="@dimen/alert_def_padding" />
+    android:theme="@style/AppAlertDialogContent"
+</FrameLayout>
