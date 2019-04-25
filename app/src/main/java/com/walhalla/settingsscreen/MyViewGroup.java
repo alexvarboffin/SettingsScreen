@@ -32,6 +32,7 @@ public class MyViewGroup extends LinearLayout {
         init(null, 0);
     }
 
+
     public MyViewGroup(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs, 0);
