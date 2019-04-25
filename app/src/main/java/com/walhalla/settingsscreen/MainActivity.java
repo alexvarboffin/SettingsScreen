@@ -15,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,9 +45,13 @@ public class MainActivity extends AppCompatActivity
 
 
         if (savedInstanceState == null) {
+
+            //new SettingsFragment()
+            Fragment fr = TestFragment.newInstance(R.layout.sample_my_view);
+
             getSupportFragmentManager()
                     .beginTransaction()
-                    .add(R.id.container, new SettingsFragment())
+                    .add(R.id.container, fr)
                     .commit();
         }
     }
